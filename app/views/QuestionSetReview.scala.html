@@ -1,0 +1,55 @@
+@(title: String)(questionSet: QuestionSet)(reviews: List[controllers.pojo.Review])
+
+@import java.math.BigInteger; var index=0
+
+@main(title) {
+    <div data-is-review=true data-question-set-id="@questionSet.id" class="root container">
+
+        <div class="container mt-1">
+            <h3>@questionSet.name</h3>
+        </div>
+
+        <div class="container mt-2">
+            <form id=practice_form" method="post" action="/questionsets/review/@questionSet.id">
+                <input type="hidden" name="json_form_data" id="json_form_data">
+                @for(review <- reviews) {
+                    @(index += 1)
+                    <div class="row mt-1">
+                        <div class="col-md-6">
+                            <div>
+                                <span>@index</span> <span>/@questionSet.questionList.size()</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div>
+                                <span>Correct Answer: @{(review.question.correctOptionIndex + 'A').toChar}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row question" data-correct-answer="@review.question.correctOptionIndex" data-user-answer="@review.userAnswer" data-was-correct="@review.wasCorrect" data-question-id="@review.question.id">
+                        <div class="col-md-6">
+                            <p>@review.question.statement</p>
+                        </div>
+                        <div class="col-md-6 ">
+                            <div class="card ">
+                            @for(option <- review.question.getOptions) {
+                                <div data-question-id="@review.question.id" data-answer-value="@review.question.getOptions.indexOf(option)"
+                                class="question-answer card-block clickable"><span class="font-weight-bold">@{
+                                    (review.question.getOptions.indexOf(option) + 'A').toChar
+                                } </span> @option
+                                </div>
+                                <input style="display:none" class="hidden-xl-up" type="radio" name="@review.question.id" value="@review.question.getOptions.indexOf(option)">
+                                }
+                            </div>
+                        </div>
+
+                    </div>
+                }
+
+            </form>
+        </div>
+    </div>
+    <script src="@routes.Assets.versioned("javascripts/app.js")"></script>
+
+}
+

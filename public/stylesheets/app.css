@@ -1,0 +1,9 @@
+.clickable {
+    cursor:pointer;
+}
+.light-green {
+    background: #D1F2EB;
+}
+.light-red {
+    background: #F5B7B1;
+}

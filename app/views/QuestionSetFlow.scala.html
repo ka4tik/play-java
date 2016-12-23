@@ -1,0 +1,558 @@
+@main("Testing") {
+<link rel="stylesheet" href="@routes.Assets.versioned("stylesheets/practice.css")">
+<link href="http://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css" rel="stylesheet" type="text/css" />
+
+<script src="//use.typekit.net/wmv4bzh.js"></script>
+<script>try{Typekit.load();}catch(e){}</script>
+
+<div class="navbar-fixed-top">
+
+    <div class="row header">
+
+        <img src="/assets/images/icon.png" height="45px" class="panel-logo hidden-xs" />
+        <img src="/assets/images/icon.png" height="25px" class="panel-logo-xs visible-xs-inline-block" />
+        <span class="panel-heading-heading">Practice Dojo - Section 1</span>
+        <span data-toggle="modal" data-target="#exit-dialog"><div class="exit-icon" data-toggle="tooltip" data-placement="bottom" title="Exit"></div></span>
+        <img src="assets/images/stopwatch.png" height="36px" class="panel-stopwatch hidden-xs" />
+            <!--<img src="/images/stopwatch.png" height="30px" class="panel-stopwatch visible-xs-inline-block" />-->
+        <span class="globaltimer"></span>
+
+    </div>
+
+</div>
+
+<div class="modal exit-modal fade" id="exit-dialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <div class="modal-header">
+                <h3 class="modal-title" id="myModalLabel">Wait! Are you sure?</h3>
+            </div>
+            <div class="modal-body">
+                <hr>
+                If you really must leave without finishing, click 'Submit Completed' below and we'll mark the questions you completed and show you their solutions.
+                <br><br>Alternatively, click 'Quit' to leave without these questions being marked.
+                <hr>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default btn-cancel" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-submit-completed" data-dismiss="modal">Submit Completed</button>
+                <a href="/"><button type="button" class="btn btn-danger">Quit</button></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-md-12">
+
+            <form method="POST" action="https://bmat.ninja/questionbank/practice/review" accept-charset="UTF-8" id="practice_form" name="practice_form"><input name="_token" type="hidden" value="7pPfxn8wM6slG2XeOp4rH5pUmxhW4EoIs5lA0iSc">
+
+                <input name="mode" type="hidden" value="standard">
+                <input name="freeSolutions" type="hidden" value="">
+                <input name="section" type="hidden" value="1">
+
+                <div class="panel panel-default">
+
+                    <div class="panel-body">
+
+                        <div class="panel-body-inner">
+
+
+                            <div class="row question" data-questionnumber="1" data-questionid="444" style="display:none;">
+
+                                <div class="col-md-12">
+
+                                    <div class="question-number">
+
+                                        <span class="number">1</span> <span class="total">/5</span>
+                                        <span class="pull-right timer" id="watchdisplay-1"></span>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-6 question2wrapper">
+
+                                    <div class="question2"><p><!--StartFragment--><p>“Is cannabis really as dangerous as some people have claimed? This is an important question, since the use of cannabis has increased, and even children under 15 are known to use it. It is said that smoking cannabis is just as dangerous as smoking tobacco, in that it is equally likely to lead to death from heart disease. A number of recent studies have suggested that smoking cannabis may increase the risk of developing schizophrenia, and that those who start smoking it before age 15 have a much higher risk of becoming schizophrenic in later life. Yet since the incidence of schizophrenia in the population has remained stable whilst the use of cannabis has been increasing, it cannot be true that smoking cannabis causes schizophrenia.” </p><!--EndFragment--></p></div>
+
+                                </div>
+
+                                <br class="visible-xs">
+
+                                <div class="col-md-6 questioncontainer">
+
+                                    <div class="actualquestion"><p><!--StartFragment--><p>Which <strong>one</strong> of the following, if true, weakens the above argument? </p><!--EndFragment--></p></div>
+
+                                    <div class="option-items" onclick="">
+
+                                        <div class="question_answer" onclick="" data-question-id="question_444_answer" data-answer-value="a">
+
+                                            <div class="abcde">A</div>
+                                            <div class="question-option"><p><!--StartFragment--><p>Most people who use cannabis do not develop schizophrenia. </p><!--EndFragment--></p></div>
+
+                                        </div>
+
+                                        <div class="question_answer" onclick="" data-question-id="question_444_answer" data-answer-value="b">
+
+                                            <div class="abcde">B</div>
+                                            <div class="question-option"><p><!--StartFragment--><p>Cannabis smoke contains high levels of substances that cause cancer. </p><!--EndFragment--></p></div>
+
+                                        </div>
+
+                                        <div class="question_answer" onclick="" data-question-id="question_444_answer" data-answer-value="c">
+
+                                            <div class="abcde">C</div>
+                                            <div class="question-option"><p><!--StartFragment--><p>Drugs that alter one’s mood cause chemical changes in the brain. </p><!--EndFragment--></p></div>
+
+                                        </div>
+
+                                        <div class="question_answer" onclick="" data-question-id="question_444_answer" data-answer-value="d">
+
+                                            <div class="abcde">D</div>
+                                            <div class="question-option"><p><!--StartFragment--><p>Cannabis smokers have higher amounts of tar in the lungs than tobacco smokers. </p><!--EndFragment--></p></div>
+
+                                        </div>
+
+                                        <div class="question_answer" onclick="" data-question-id="question_444_answer" data-answer-value="e">
+
+                                            <div class="abcde">E</div>
+                                            <div class="question-option"><p><!--StartFragment--><p>The use of cannabis by those aged under 15 is a recent development. </p><!--EndFragment--></p></div>
+
+                                        </div>
+
+                                        <ol type="A" style="display:none">
+
+                                            <li><input type="radio" name="question_444_answer" value="a"><!--StartFragment--><p>Most people who use cannabis do not develop schizophrenia. </p><!--EndFragment--></li>
+                                            <li><input type="radio" name="question_444_answer" value="b"><!--StartFragment--><p>Cannabis smoke contains high levels of substances that cause cancer. </p><!--EndFragment--></li>
+                                            <li><input type="radio" name="question_444_answer" value="c"><!--StartFragment--><p>Drugs that alter one’s mood cause chemical changes in the brain. </p><!--EndFragment--></li>
+                                            <li><input type="radio" name="question_444_answer" value="d"><!--StartFragment--><p>Cannabis smokers have higher amounts of tar in the lungs than tobacco smokers. </p><!--EndFragment--></li>
+                                            <li><input type="radio" name="question_444_answer" value="e"><!--StartFragment--><p>The use of cannabis by those aged under 15 is a recent development. </p><!--EndFragment--></li>
+
+                                        </ol>
+
+                                    </div>
+
+                                </div>
+
+
+                                    <!--<input class="submitButton btn-primary btn" type="submit" value="Submit">-->
+
+                            </div>
+
+
+                            <div class="row question" data-questionnumber="2" data-questionid="261" style="display:none;">
+
+                                <div class="col-md-12">
+
+                                    <div class="question-number">
+
+                                        <span class="number">2</span> <span class="total">/5</span>
+                                        <span class="pull-right timer" id="watchdisplay-2"></span>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-6 question2wrapper">
+
+                                    <div class="question2"><p><p>One in ten adults in the UK has had a body piercing somewhere other than the ear lobe. 28% of these experienced complications and 1% were admitted to hospital, according to a survey of 10,000 adults. Body piercing is three times more common in women than men. Navel piercings are most common amongst women, whereas men are more likely to have a nipple piercing. Swelling, infection and bleeding are common side effects and tongue piercings are the most risky. Serious complications resulting in hospital admission mostly occur with piercings performed by non specialists rather than those carried out in a tattoo parlour or specialist piercing shop. In the other countries, people have been infected with hepatitis B and C and HIV.&nbsp;</p></p></div>
+
+                                </div>
+
+                                <br class="visible-xs">
+
+                                <div class="col-md-6 questioncontainer">
+
+                                    <div class="actualquestion"><p><p>Which one of the following can reliably be concluded from the information above?</p></p></div>
+
+                                    <div class="option-items" onclick="">
+
+                                        <div class="question_answer" onclick="" data-question-id="question_261_answer" data-answer-value="a">
+
+                                            <div class="abcde">A</div>
+                                            <div class="question-option"><p><p>Good piercers give their clients advice about how to care for a piercing and minimise the risk of infection.</p></p></div>
+
+                                        </div>
+
+                                        <div class="question_answer" onclick="" data-question-id="question_261_answer" data-answer-value="b">
+
+                                            <div class="abcde">B</div>
+                                            <div class="question-option"><p><p>No one should ever get a body piercing because the risk outweighs the benefit.</p></p></div>
+
+                                        </div>
+
+                                        <div class="question_answer" onclick="" data-question-id="question_261_answer" data-answer-value="c">
+
+                                            <div class="abcde">C</div>
+                                            <div class="question-option"><p><p>Nothing can reliably be concluded because the survey sample was too small to be representative.</p></p></div>
+
+                                        </div>
+
+                                        <div class="question_answer" onclick="" data-question-id="question_261_answer" data-answer-value="d">
+
+                                            <div class="abcde">D</div>
+                                            <div class="question-option"><p><p>People who want a body piercing would be well advised to go to a reputable piercer.</p></p></div>
+
+                                        </div>
+
+                                        <div class="question_answer" onclick="" data-question-id="question_261_answer" data-answer-value="e">
+
+                                            <div class="abcde">E</div>
+                                            <div class="question-option"><p><p>The Government should regulate body piercers more strictly to reduce complications.</p></p></div>
+
+                                        </div>
+
+                                        <ol type="A" style="display:none">
+
+                                            <li><input type="radio" name="question_261_answer" value="a"><p>Good piercers give their clients advice about how to care for a piercing and minimise the risk of infection.</p></li>
+                                            <li><input type="radio" name="question_261_answer" value="b"><p>No one should ever get a body piercing because the risk outweighs the benefit.</p></li>
+                                            <li><input type="radio" name="question_261_answer" value="c"><p>Nothing can reliably be concluded because the survey sample was too small to be representative.</p></li>
+                                            <li><input type="radio" name="question_261_answer" value="d"><p>People who want a body piercing would be well advised to go to a reputable piercer.</p></li>
+                                            <li><input type="radio" name="question_261_answer" value="e"><p>The Government should regulate body piercers more strictly to reduce complications.</p></li>
+
+                                        </ol>
+
+                                    </div>
+
+                                </div>
+
+
+                                    <!--<input class="submitButton btn-primary btn" type="submit" value="Submit">-->
+
+                            </div>
+
+
+                            <div class="row question" data-questionnumber="3" data-questionid="779" style="display:none;">
+
+                                <div class="col-md-12">
+
+                                    <div class="question-number">
+
+                                        <span class="number">3</span> <span class="total">/5</span>
+                                        <span class="pull-right timer" id="watchdisplay-3"></span>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-6 question2wrapper">
+
+                                    <div class="question2"><p><h3 style="text-align: center;"><strong>Comparing cannabis with tobacco</strong></h3><p style="text-align: center;"><em>Smoking cannabis, like smoking tobacco, can be a major public health hazard</em></p><p><img class="fr-fin fr-dib" alt="Image title" src="https://bmatninja.s3-eu-west-1.amazonaws.com/questions%2F1436877864198-Q32-35.png" width="574"></p><h6 style="text-align: center;"><!--StartFragment-->Henry JA, Oldfield WLG &amp; Kon OM. Comparing cannabis with tobacco. BMJ, 2003; 326: 942-3.</h6><h6 style="text-align: center;">Reproduced with permission from the BMJ Publishing Group. <!--EndFragment--></h6><p><em> </em><!--EndFragment--></p><h3><strong></strong> <!--EndFragment--></h3><p style="text-align: center;"><strong>Answer the following questions, assuming that the information above is accurate. </strong><!--EndFragment--></p></p></div>
+
+                                </div>
+
+                                <br class="visible-xs">
+
+                                <div class="col-md-6 questioncontainer">
+
+                                    <div class="actualquestion"><p><!--StartFragment--><p>Which of the following statements may we safely conclude to be accurate? </p><!--EndFragment--></p></div>
+
+                                    <div class="option-items" onclick="">
+
+                                        <div class="question_answer" onclick="" data-question-id="question_779_answer" data-answer-value="a">
+
+                                            <div class="abcde">A</div>
+                                            <div class="question-option"><p><!--StartFragment--><p>Smoking cannabis is less harmful than smoking tobacco because it occurs less frequently. </p><!--EndFragment--></p></div>
+
+                                        </div>
+
+                                        <div class="question_answer" onclick="" data-question-id="question_779_answer" data-answer-value="b">
+
+                                            <div class="abcde">B</div>
+                                            <div class="question-option"><p><!--StartFragment--><p>Smoking cannabis is equally harmful to smoking tobacco because largely identical chemicals are produced. </p><!--EndFragment--></p></div>
+
+                                        </div>
+
+                                        <div class="question_answer" onclick="" data-question-id="question_779_answer" data-answer-value="c">
+
+                                            <div class="abcde">C</div>
+                                            <div class="question-option"><p><!--StartFragment--><p>Smoking cannabis is more harmful than smoking tobacco because the products of combustion are retained to a higher degree. </p><!--EndFragment--></p></div>
+
+                                        </div>
+
+                                        <div class="question_answer" onclick="" data-question-id="question_779_answer" data-answer-value="d">
+
+                                            <div class="abcde">D</div>
+                                            <div class="question-option"><p><!--StartFragment--><p>Cannabis smokers often smoke tobacco, incurring harm produced by both. </p><!--EndFragment--></p></div>
+
+                                        </div>
+
+                                        <div class="question_answer" onclick="" data-question-id="question_779_answer" data-answer-value="e">
+
+                                            <div class="abcde">E</div>
+                                            <div class="question-option"><p><p>-</p></p></div>
+
+                                        </div>
+
+                                        <ol type="A" style="display:none">
+
+                                            <li><input type="radio" name="question_779_answer" value="a"><!--StartFragment--><p>Smoking cannabis is less harmful than smoking tobacco because it occurs less frequently. </p><!--EndFragment--></li>
+                                            <li><input type="radio" name="question_779_answer" value="b"><!--StartFragment--><p>Smoking cannabis is equally harmful to smoking tobacco because largely identical chemicals are produced. </p><!--EndFragment--></li>
+                                            <li><input type="radio" name="question_779_answer" value="c"><!--StartFragment--><p>Smoking cannabis is more harmful than smoking tobacco because the products of combustion are retained to a higher degree. </p><!--EndFragment--></li>
+                                            <li><input type="radio" name="question_779_answer" value="d"><!--StartFragment--><p>Cannabis smokers often smoke tobacco, incurring harm produced by both. </p><!--EndFragment--></li>
+                                            <li><input type="radio" name="question_779_answer" value="e"><p>-</p></li>
+
+                                        </ol>
+
+                                    </div>
+
+                                </div>
+
+
+                                    <!--<input class="submitButton btn-primary btn" type="submit" value="Submit">-->
+
+                            </div>
+
+
+                            <div class="row question" data-questionnumber="4" data-questionid="498" style="display:none;">
+
+                                <div class="col-md-12">
+
+                                    <div class="question-number">
+
+                                        <span class="number">4</span> <span class="total">/5</span>
+                                        <span class="pull-right timer" id="watchdisplay-4"></span>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-6 question2wrapper">
+
+                                    <div class="question2"><p><p><img alt="Image title" class="fr-fin fr-dib" src="https://bmatninja.s3-eu-west-1.amazonaws.com/questions%2F1436637202354-Q31-35.png" width="300"></p><p><!--StartFragment-->Internet companies are discovering, as billions of people have before them, that whilegrowing up brings problems, maturity brings more.</p><p>For e-Bay, Google, Yahoo! and Microsoft, the internet’s commercial potential is provingbigger than even most early dreamers imagined. To keep expanding at sensational rates,however, players are encroaching on each other’s territory. Competition, which was oncesharks against minnows, is becoming a battle of the giants. Corporate manoeuvring isreaching soap opera intensity.</p><p>Google, now the dominant online search engine, is making the pace. It snatched a longtermlink with AOL Time Warner from under the nose of Microsoft. In the first quarter of2006 it boosted revenue by 80% to more than $2 billion (£1.2 billion). That represents a lotof advertising, the common revenue all are chasing.</p><p>Yahoo! and Microsoft fret at losing market share. E-Bay, the auction and trading site, fearsthat Google is pushing its own new consumer trading facility and also threatening e-Bay’sPayPal online payments system with a rival system.</p><p>The three, who recently looked down on Google, wonder if they can forge alliances tocombat it. Microsoft does not want anyone repeating on the internet what it achieved incomputer systems. The jockeying offers rich entertainment and opportunities forconsumers, so long as the players do not gang up against them.<!--EndFragment--></p><p style="text-align: right; font-size: 11px"><!--StartFragment-->© The Times, 22 April 2006<!--EndFragment--></p></p></div>
+
+                                </div>
+
+                                <br class="visible-xs">
+
+                                <div class="col-md-6 questioncontainer">
+
+                                    <div class="actualquestion"><p><!--StartFragment--><p>Which of the following can reliably be inferred from the passage, especially from the lastparagraph? </p><!--EndFragment--></p></div>
+
+                                    <div class="option-items" onclick="">
+
+                                        <div class="question_answer" onclick="" data-question-id="question_498_answer" data-answer-value="a">
+
+                                            <div class="abcde">A</div>
+                                            <div class="question-option"><p><!--StartFragment--><p>Google is achieving on the internet what Microsoft achieved in computer systems.</p><!--EndFragment--></p></div>
+
+                                        </div>
+
+                                        <div class="question_answer" onclick="" data-question-id="question_498_answer" data-answer-value="b">
+
+                                            <div class="abcde">B</div>
+                                            <div class="question-option"><p><!--StartFragment--><p>The former giants of IT no longer look down on Google.</p><!--EndFragment--></p></div>
+
+                                        </div>
+
+                                        <div class="question_answer" onclick="" data-question-id="question_498_answer" data-answer-value="c">
+
+                                            <div class="abcde">C</div>
+                                            <div class="question-option"><p><!--StartFragment--><p>The only way for Microsoft to stop Google is to merge with its former rivals.</p><!--EndFragment--></p></div>
+
+                                        </div>
+
+                                        <div class="question_answer" onclick="" data-question-id="question_498_answer" data-answer-value="d">
+
+                                            <div class="abcde">D</div>
+                                            <div class="question-option"><p><!--StartFragment--><p>Consumers will lose out if the big IT companies merge.</p><!--EndFragment--></p></div>
+
+                                        </div>
+
+                                        <div class="question_answer" onclick="" data-question-id="question_498_answer" data-answer-value="e">
+
+                                            <div class="abcde">E</div>
+                                            <div class="question-option"><p><p>-</p></p></div>
+
+                                        </div>
+
+                                        <ol type="A" style="display:none">
+
+                                            <li><input type="radio" name="question_498_answer" value="a"><!--StartFragment--><p>Google is achieving on the internet what Microsoft achieved in computer systems.</p><!--EndFragment--></li>
+                                            <li><input type="radio" name="question_498_answer" value="b"><!--StartFragment--><p>The former giants of IT no longer look down on Google.</p><!--EndFragment--></li>
+                                            <li><input type="radio" name="question_498_answer" value="c"><!--StartFragment--><p>The only way for Microsoft to stop Google is to merge with its former rivals.</p><!--EndFragment--></li>
+                                            <li><input type="radio" name="question_498_answer" value="d"><!--StartFragment--><p>Consumers will lose out if the big IT companies merge.</p><!--EndFragment--></li>
+                                            <li><input type="radio" name="question_498_answer" value="e"><p>-</p></li>
+
+                                        </ol>
+
+                                    </div>
+
+                                </div>
+
+
+                                    <!--<input class="submitButton btn-primary btn" type="submit" value="Submit">-->
+
+                            </div>
+
+
+                            <div class="row question" data-questionnumber="5" data-questionid="61" style="display:none;">
+
+                                <div class="col-md-12">
+
+                                    <div class="question-number">
+
+                                        <span class="number">5</span> <span class="total">/5</span>
+                                        <span class="pull-right timer" id="watchdisplay-5"></span>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-6 question2wrapper">
+
+                                    <div class="question2"><p><p>Socialist politicians are often taunted by their opponents for leading lifestyles similar to those of their capitalist counterparts. The theme of the taunts runs like this; 'You object on socialist principles to gross inequalities in the distribution of wealth; yet you enjoy a higher personal standard of living than the majority of the population. Therefore you are not really a socialist'. But the jibe can easily be answered, for there is no hypocrisy in arguing, even from a privileged position, for a fairer and more equal society.</p></p></div>
+
+                                </div>
+
+                                <br class="visible-xs">
+
+                                <div class="col-md-6 questioncontainer">
+
+                                    <div class="actualquestion"><p><p>Which of the following is a conclusion which can be reliably drawn from the passage as a whole?</p></p></div>
+
+                                    <div class="option-items" onclick="">
+
+                                        <div class="question_answer" onclick="" data-question-id="question_61_answer" data-answer-value="a">
+
+                                            <div class="abcde">A</div>
+                                            <div class="question-option"><p><p>Socialists who enjoy personal wealth cannot object to others who amass even greater wealth.</p></p></div>
+
+                                        </div>
+
+                                        <div class="question_answer" onclick="" data-question-id="question_61_answer" data-answer-value="b">
+
+                                            <div class="abcde">B</div>
+                                            <div class="question-option"><p><p>Someone can be a genuine socialist whilst enjoying a high standard of living.</p></p></div>
+
+                                        </div>
+
+                                        <div class="question_answer" onclick="" data-question-id="question_61_answer" data-answer-value="c">
+
+                                            <div class="abcde">C</div>
+                                            <div class="question-option"><p><p>Calls for reform are more effective if they come from the more privileged classes of society.</p></p></div>
+
+                                        </div>
+
+                                        <div class="question_answer" onclick="" data-question-id="question_61_answer" data-answer-value="d">
+
+                                            <div class="abcde">D</div>
+                                            <div class="question-option"><p><p>There is nothing immoral about inequalities in the distribution of wealth.</p></p></div>
+
+                                        </div>
+
+                                        <div class="question_answer" onclick="" data-question-id="question_61_answer" data-answer-value="e">
+
+                                            <div class="abcde">E</div>
+                                            <div class="question-option"><p><p>It is hypocritical to claim to be a socialist if one enjoys a standard of living above the average.</p></p></div>
+
+                                        </div>
+
+                                        <ol type="A" style="display:none">
+
+                                            <li><input type="radio" name="question_61_answer" value="a"><p>Socialists who enjoy personal wealth cannot object to others who amass even greater wealth.</p></li>
+                                            <li><input type="radio" name="question_61_answer" value="b"><p>Someone can be a genuine socialist whilst enjoying a high standard of living.</p></li>
+                                            <li><input type="radio" name="question_61_answer" value="c"><p>Calls for reform are more effective if they come from the more privileged classes of society.</p></li>
+                                            <li><input type="radio" name="question_61_answer" value="d"><p>There is nothing immoral about inequalities in the distribution of wealth.</p></li>
+                                            <li><input type="radio" name="question_61_answer" value="e"><p>It is hypocritical to claim to be a socialist if one enjoys a standard of living above the average.</p></li>
+
+                                        </ol>
+
+                                    </div>
+
+                                </div>
+
+
+                                    <!--<input class="submitButton btn-primary btn" type="submit" value="Submit">-->
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+        </div>
+
+        <div class="visible-xs-block 50pxspacer">
+
+		</div>
+
+    </div>
+
+</div>
+
+<div class="container-fluid">
+
+    <div class="navbar-fixed-bottom normal-row">
+
+        <div class="panel-footer bottombar row">
+
+            <div class="col-xs-6 col-sm-2 nopadding">
+
+                <div class="previousButton" style="display:none;">Previous</div>
+
+            </div>
+
+            <div class="col-xs-6 col-sm-2 col-sm-push-8 nopadding">
+
+                <div class="nextButton">Next</div>
+                <span style="display:none"><input class="submitButton" type="submit" value="Finish"></span>
+                <div class="fakeSubmitButton"><span class="glyphicon glyphicon-ok" style="margin-right: 10px;margin-left: -10px;"></span> Finish</div>
+
+            </div>
+
+            <div class="pagination-wrapper col-xs-12 col-sm-8 col-sm-pull-2 nopadding">
+
+                <div class="backscroll hidden-xs"></div>
+
+                <ul class="pagination">
+
+
+                    <li class="bottombar-questions" data-questionid="" data-questionnumber="1"onclick="showOnlyQuestion(1)">1</li>
+
+
+                    <li class="bottombar-questions" data-questionid="" data-questionnumber="2"onclick="showOnlyQuestion(2)">2</li>
+
+
+                    <li class="bottombar-questions" data-questionid="" data-questionnumber="3"onclick="showOnlyQuestion(3)">3</li>
+
+
+                    <li class="bottombar-questions" data-questionid="" data-questionnumber="4"onclick="showOnlyQuestion(4)">4</li>
+
+
+                    <li class="bottombar-questions" data-questionid="" data-questionnumber="5"onclick="showOnlyQuestion(5)">5</li>
+
+
+                </ul>
+
+                <div class="forwardscroll hidden-xs"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="loadingModal"><!-- Place at bottom of page --></div>
+
+
+    <!-- Scripts -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<script type="text/javascript"
+src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert-dev.min.js"></script>
+
+
+<script src="@routes.Assets.versioned("javascripts/practice.js")"></script>
+    }

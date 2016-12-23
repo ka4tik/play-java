@@ -1,0 +1,53 @@
+@(title: String)(questionSet: QuestionSet)
+
+@import java.math.BigInteger; var index=0
+
+@main(title) {
+    <div data-is-review=false data-question-set-id="@questionSet.id" class="root container">
+
+        <div class="container mt-1">
+            <h3>@questionSet.name</h3>
+        </div>
+
+        <div class="container mt-2">
+            <form id=practice_form" method="post" action="/questionsets/review/@questionSet.id">
+                <input type="hidden" name="json_form_data" id="json_form_data">
+            @for(question <- questionSet.getQuestionList) {
+                @(index += 1)
+                <div class="row mt-1">
+                    <div class="col-md-12">
+                        <div>
+                            <span>@index</span> <span>/@questionSet.questionList.size()</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row bg-faded question" data-question-id="@question.id">
+                    <div class="col-md-6">
+                        <p>@question.statement</p>
+                    </div>
+
+                    <div class="col-md-6 ">
+                        <div class="card">
+                        @for(option <- question.getOptions) {
+                            <div data-question-id="@question.id" data-answer-value="@question.getOptions.indexOf(option)"
+                            class="question-answer card-block clickable"><span class="font-weight-bold">@{
+                                (question.getOptions.indexOf(option) + 'A').toChar
+                            } </span> @option
+                            </div>
+                            <input style="display:none" class="hidden-xl-up" type="radio" name="@question.id" value="@question.getOptions.indexOf(option)">
+                            }
+                        </div>
+                    </div>
+
+                </div>
+
+            }
+                <input type="submit" value="Submit Test" class="btn-success">
+
+            </form>
+        </div>
+    </div>
+    <script src="@routes.Assets.versioned("javascripts/app.js")"></script>
+
+}
+
