@@ -2,12 +2,48 @@ import models.Question;
 import models.QuestionSet;
 import org.junit.Test;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
+import java.util.Scanner;
 
 import static play.test.Helpers.fakeApplication;
 import static play.test.Helpers.running;
 
 public class ModelTest {
+
+    @Test
+    public void loadDsQuiz()   {
+        running(fakeApplication(), () -> {
+            ClassLoader classLoader = getClass().getClassLoader();
+            File file = new File(classLoader.getResource("questionsets/datastructure").getFile());
+            try {
+                Scanner scanner = new Scanner(file);
+                QuestionSet questionSet = new QuestionSet();
+                questionSet.name = scanner.nextLine();
+                List<Question> questionList = new ArrayList<Question>();
+                while(scanner.hasNextLine()) {
+                    Question question = new Question();
+                    question.statement = scanner.nextLine();
+                    question.options = new ArrayList<String>();
+                    for(int i=0;i<4;i++)
+                    question.options.add(scanner.nextLine());
+                    question.correctOptionIndex = Integer.parseInt(scanner.nextLine());
+                    question.answerExplanation = scanner.nextLine();
+                    questionList.add(question);
+                    question.save();
+                    if(scanner.hasNextLine())
+                    scanner.nextLine();
+                }
+                questionSet.setQuestionList(questionList);
+                questionSet.save();
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+        });
+    }
     @Test
     public void save() {
         running(fakeApplication(), () -> {

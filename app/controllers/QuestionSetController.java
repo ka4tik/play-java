@@ -1,7 +1,5 @@
 package controllers;
 
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import controllers.pojo.QuestionAnswer;
@@ -25,12 +23,12 @@ public class QuestionSetController extends Controller {
 
     public Result index() {
         List<QuestionSet> questionSets = QuestionSet.find.all();
-        return ok(QuestionSetsAll.render("Question Set", questionSets));
+        return ok(QuestionSetsIndex.render("Question Set", questionSets));
     }
 
     public Result questionSet(Long id) {
         QuestionSet questionSet = QuestionSet.find.byId(id);
-        return ok(QuestionSetDisplay.render("Question Set" + id, questionSet));
+        return ok(QuestionSetDisplay.render("Question Set " + id, questionSet));
 
     }
 
@@ -62,10 +60,7 @@ public class QuestionSetController extends Controller {
         String responseJson = mapper.writeValueAsString(reviews);
         Logger.info("Review: " +  responseJson);
 
-        return ok(QuestionSetReview.render("Question Set Review" + id, questionSet, reviews));
+        return ok(QuestionSetReview.render("Question Set Review " + id, questionSet, reviews));
     }
-
-
-
 
 }

@@ -21,6 +21,23 @@
 
     </head>
     <body>
+        <nav class="navbar navbar-dark bg-inverse">
+            <ul class="nav navbar-nav">
+                <a class="navbar-brand" href="#">
+                    <img src="/assets/images/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+                    Questionnaire
+                </a>
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="@routes.QuestionSetController.index()">Question Sets</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+            </ul>
+        </nav>
         @* And here's where we render the `Html` object containing
         * the page content. *@
         @content

@@ -1,0 +1,80 @@
+DataStructures Quiz 1
+Which one of the below is not divide and conquer approach?
+Insertion Sort
+Merge Sort
+Shell Sort
+Heap Sort
+1
+Among the options, only Merge sort divides the list in sub-list, sorts and then merges them together
+
+What data structure is used for breadth first traversal of a graph?
+queue
+stack
+list
+none of the above
+0
+Queue is used for breadth first traversal whereas stack is used for depth first traversal.
+
+The following formular is of left_subtree (keys)  ≤  node (key)  ≤  right_subtree (keys)
+Binary Tree
+Complete Binary Tree
+Binary Search Tree
+All of the above
+2
+A binary search tree (BST) is a tree in which all nodes follows the below mentioned properties.<br>The left sub-tree of a node has key less than or equal to its parent node's key.<br>The right sub-tree of a node has key greater than or equal to its parent node's key.
+
+The minimum number of edges required to create a cyclid graph of n vertices is
+n
+n - 1
+n + 1
+2n
+0
+To make a graph cyclic, the number of edges should be at least equal to vertices in the graph.
+
+Which of the following has search effeciency of Ο(1) −
+Tree
+Heap
+Hash Table
+Linked-List
+2
+A simple hash table has the Ω(1) efficiency.
+
+Quick sort running time depends on the selection of
+size of array
+pivot element
+sequence of values
+none of the above!
+1
+If the pivot element is balanced, quick sort running time will be less.
+
+Which of the following is not possible with an array in C programming langauge −
+Declaration
+Definition
+Dynamic Allocation
+Array of strings
+2
+Array in C are static and cannot be shrinked or expanded in run-time.
+
+In a min heap
+minimum values are stored.
+child nodes have less value than parent nodes.
+parent nodes have less value than child nodes.
+maximum value is contained by the root node.
+2
+In a min heap, parent nodes store lesser values than child nodes. The minimum value of the entire heap is stored at root.
+
+If locality is a concern, you can use _______ to traverse the graph.
+Breadth First Search
+Depth First Search
+Either BFS or DFS
+None of the above!
+1
+DFS is a better choice when locality-wise items are concerned.
+
+Apriori analysis of an algorithm assumes that −
+the algorithm has been tested before in real environment.
+all other factors like CPU speed are constant and have no effect on implementation.
+the algorithm needs not to be practical.
+none of the above.
+1
+Efficiency of algorithm is measured by assuming that all other factors e.g. processor speed, are constant and have no effect on implementation.

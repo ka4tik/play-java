@@ -19,6 +19,7 @@ public class Question extends Model {
     public Long id;
 
     @Constraints.Required
+    @Column(columnDefinition = "TEXT")
     public String statement;
 
     @DbJson
@@ -27,6 +28,9 @@ public class Question extends Model {
 
     @Constraints.Required
     public int correctOptionIndex;
+
+    @Column(columnDefinition = "TEXT")
+    public String answerExplanation;
 
     public static Finder<Long, Question> find = new Finder<Long,Question>(Question.class);
 
@@ -62,4 +66,11 @@ public class Question extends Model {
         this.correctOptionIndex = correctOptionIndex;
     }
 
+    public String getAnswerExplanation() {
+        return answerExplanation;
+    }
+
+    public void setAnswerExplanation(String answerExplanation) {
+        this.answerExplanation = answerExplanation;
+    }
 }

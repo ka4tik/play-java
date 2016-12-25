@@ -5,9 +5,10 @@
 
 create table question (
   id                            bigserial not null,
-  statement                     varchar(255),
+  statement                     TEXT,
   options                       json,
   correct_option_index          integer,
+  answer_explanation            TEXT,
   constraint pk_question primary key (id)
 );
 
