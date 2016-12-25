@@ -1,0 +1,48 @@
+GATE-CS-2016 Set-1
+Out of the following four sentences, select the most suitable sentence with respect to grammar and usage.
+I will not leave the place until the minister does not meet me.
+I will not leave the place until the minister doesn’t meet me.
+I will not leave the place until the minister meet me.
+I will not leave the place until the minister meets me
+3
+Not is already embedded in until. So, A and B are incorrect.   Also, the minister is a single person, and with a singular subject, singular verb follows(ending in 's'). Thus, C is incorrect and D is the right answer.
+
+A rewording of something written or spoken is a ______________.
+paraphrase
+paradox
+paradigm
+paraffin
+0
+Paraphrase - To express something in different words so that it becomes easy for the listener to understand.   Paradox - A statement which sounds logical, but proves to be illogical when investigated.   Paradigm - A way of looking or thinking (perception) about something.   Paraffin - A flammable substance used in candles, polishes, etc.   So, A is the correct choice.
+
+Archimedes said, “Give me a lever long enough and a fulcrum on which to place it, and I will move the world.” The sentence above is an example of a ___________ statement.
+figurative
+collateral
+literal
+figurine
+2
+Here, we are talking about figure of speech So, figurative is figure of speech meaning : Use of metamorphic meaning of words to explain your thoughts instead of literal use of them.
+
+If ‘relftaga’ means carefree, ‘otaga’ means careful and ‘fertaga’ means careless, which of the following could mean ‘aftercare’?
+zentaga
+tagafer
+tagazen
+relffer
+2
+'taga' and 'care' are a matching pair in every combination. So, 'taga' surely represents 'care'.   Also, note here that the second half of the word in encoded value refers to the first half of the word in the decoded value. So, 'fer' represents 'less', 'relf' represents 'free' and 'o' represents 'full'.   Going by the same logic, the answer would be tagazen, i.e., C.
+
+A cube is built using 64 cubic blocks of side one unit. After it is built, one cubic block is removed from every corner of the cube. The resulting surface area of the body (in square units) after the removal is __________.
+56
+64
+72
+96
+3
+The surface area of the body will remain unchanged as when a cube is removed, it exposes three faces, which makes the number of exposed faces same as before removal.   So, surface area of the body before removal = surface area of the body after removal = 6 * side * side = 6 * 4 * 4 = 96.   Thus, D is the correct choice.
+
+A shaving set company sells 4 different types of razors, Elegance, Smooth, Soft and Executive. Elegance sells at Rs. 48, Smooth at Rs. 63, Soft at Rs. 78 and Executive at Rs. 173 per piece. The table below shows the numbers of each razor sold in each quarter of a year.</br><img class="image-fluid" src="/assets/images/questions/GATECS161.png"></br>Which product contributes the greatest fraction to the revenue of the company in that year?
+Elegance
+Executive
+Smooth
+Soft
+1
+Revenue from Elegance = (27300+25222+28976+21012) * Rs. 48 = Rs. 4920480 Revenue from Smooth = (20009+19392+22429+18229) * Rs. 63 = Rs. 5043717 Revenue from Soft = (17602+18445+19544+16595) * Rs. 78 = Rs. 5630508 Revenue from Executive = (9999+8942+10234+10109) * Rs. 173 = Rs. 6796132 Total Revenue = Rs. 22390837   Fraction of Revenue for Elegance = 0.219 Fraction of Revenue for Smooth = 0.225 Fraction of Revenue for Soft = 0.251 Fraction of Revenue for Executive = 0.303   Thus, B (Executive) is the correct answer.
