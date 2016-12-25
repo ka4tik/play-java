@@ -15,18 +15,29 @@
                 @for(review <- reviews) {
                     @(index += 1)
                     <div class="row mt-1">
-                        <div class="col-md-6">
-                            <div>
+                        <div class="col-md-4">
                                 <span>@index</span> <span>/@questionSet.questionList.size()</span>
-                            </div>
                         </div>
-                        <div class="col-md-6">
-                            <div>
+                        <div class="col-md-4">
                                 <span>Correct Answer: @{(review.question.correctOptionIndex + 'A').toChar}</span>
-                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <button class="btn btn-sm btn-outline-primary" type="button" data-toggle="collapse" data-target="#collapse@index" aria-expanded="false" aria-controls="collapseExample">
+                        View Explanation
+                            </button>
+                            @if(review.wasCorrect) {
+                                <span class="correct-incorrect correct-answer">CORRECT</span>
+                            } else {
+                                <span class="correct-incorrect incorrect-answer">INCORRECT</span>
+                            }
                         </div>
                     </div>
-                    <div class="row question" data-correct-answer="@review.question.correctOptionIndex" data-user-answer="@review.userAnswer" data-was-correct="@review.wasCorrect" data-question-id="@review.question.id">
+                    <div class="collapse" id="collapse@index">
+                        <div class="card card-block">
+                            @review.question.answerExplanation
+                        </div>
+                    </div>
+                    <div class="row question bg-faded mt-1" data-correct-answer="@review.question.correctOptionIndex" data-user-answer="@review.userAnswer" data-was-correct="@review.wasCorrect" data-question-id="@review.question.id">
                         <div class="col-md-6">
                             <p>@review.question.statement</p>
                         </div>
@@ -34,11 +45,11 @@
                             <div class="card ">
                             @for(option <- review.question.getOptions) {
                                 <div data-question-id="@review.question.id" data-answer-value="@review.question.getOptions.indexOf(option)"
-                                class="question-answer card-block clickable"><span class="font-weight-bold">@{
+                                class="question-answer card-block clickable"><span class="tag tag-default">@{
                                     (review.question.getOptions.indexOf(option) + 'A').toChar
                                 } </span> @option
                                 </div>
-                                <input style="display:none" class="hidden-xl-up" type="radio" name="@review.question.id" value="@review.question.getOptions.indexOf(option)">
+                                <input style="display:none" type="radio" name="@review.question.id" value="@review.question.getOptions.indexOf(option)">
                                 }
                             </div>
                         </div>

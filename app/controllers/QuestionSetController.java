@@ -23,7 +23,7 @@ public class QuestionSetController extends Controller {
 
     public Result index() {
         List<QuestionSet> questionSets = QuestionSet.find.all();
-        return ok(QuestionSetsIndex.render("Question Set", questionSets));
+        return ok(QuestionSetsIndex.render("Question Sets", questionSets));
     }
 
     public Result questionSet(Long id) {

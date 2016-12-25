@@ -5,5 +5,25 @@
     background: #D1F2EB;
 }
 .light-red {
-    background: #F5B7B1;
+    background: #FADBD8;
+}
+.correct-incorrect {
+    padding: .25rem .5rem;
+    font-size: .875rem;
+    border-radius: .2rem;
+    background: transparent none;
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.25;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+.correct-answer {
+    border: 1px solid green;
+    color: green;
+}
+.incorrect-answer {
+    border: 1px solid red;
+    color: red;
 }

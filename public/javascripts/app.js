@@ -7,8 +7,6 @@ $(document).ready(function () {
     console.log("type isReview: " + typeof isReview);
 
     if (isReview) {
-        console.log("got here true");
-
         $(".question").each(function () {
 
             var qid = $(this).data('question-id');
@@ -18,11 +16,11 @@ $(document).ready(function () {
             console.log("qid: " + qid);
             console.log("user_answer: " + user_answer);
             console.log("correct answer: " + correct_answer);
-            if (was_correct) {
-                $(this).addClass("light-green");
-            } else {
-                $(this).addClass("light-red");
-            }
+            // if (was_correct) {
+            //     $(this).addClass("light-green");
+            // } else {
+            //     $(this).addClass("light-red");
+            // }
             if (user_answer != -1) {
                 $('.question-answer[data-question-id="' + qid + '"][data-answer-value="' + user_answer + '"]').addClass('selected-answer bg-info text-white');
             }
@@ -30,7 +28,6 @@ $(document).ready(function () {
         });
     }
     if (!isReview) {
-        console.log("got here false");
         $('body').on('click touchstart tap', '.question-answer', function () {
 
             console.log("Clicked: " + this);

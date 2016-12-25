@@ -30,7 +30,7 @@
                         <div class="card">
                         @for(option <- question.getOptions) {
                             <div data-question-id="@question.id" data-answer-value="@question.getOptions.indexOf(option)"
-                            class="question-answer card-block clickable"><span class="font-weight-bold">@{
+                            class="question-answer card-block clickable"><span class="tag tag-default">@{
                                 (question.getOptions.indexOf(option) + 'A').toChar
                             } </span> @option
                             </div>
@@ -42,10 +42,8 @@
                 </div>
 
             }
-                <div class="container mt-3">
-                    <div class="row">
-                        <div class="col-md-4 offset-md-4"><input type="submit" value="Submit Test" class="btn-success"></div>
-                    </div>
+                <div class="container mt-3 mx-auto">
+                    <input class="btn-success btn-lg" type="submit" value="Submit Test">
                 </div>
 
             </form>

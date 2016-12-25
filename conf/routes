@@ -1,3 +1,4 @@
+GET /                                 controllers.HomeController.index
 GET /questionsets                    controllers.QuestionSetController.index
 GET /questionsets/:id                controllers.QuestionSetController.questionSet(id: Long)
 POST /questionsets/review/:id        controllers.QuestionSetController.questionSetReview(id: Long)

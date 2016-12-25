@@ -20,8 +20,9 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
 
     </head>
-    <body>
-        <nav class="navbar navbar-dark bg-inverse">
+    <body class="pt-3">
+        <nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
+            <div class="container">
             <ul class="nav navbar-nav">
                 <a class="navbar-brand" href="#">
                     <img src="/assets/images/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
@@ -33,10 +34,11 @@
                 <li class="nav-item">
                     <a class="nav-link" href="@routes.QuestionSetController.index()">Question Sets</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item ">
                     <a class="nav-link" href="#">About</a>
                 </li>
             </ul>
+            </div>
         </nav>
         @* And here's where we render the `Html` object containing
         * the page content. *@
