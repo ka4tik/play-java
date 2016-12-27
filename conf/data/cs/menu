@@ -1,0 +1,14 @@
+.critical thinking
+cs/critical_thinking
+..introduction
+cs/critical_thinking/introduction
+..guessing
+cs/critical_thinking/guessing
+.data structure
+cs/ds
+..stacks
+stacks
+..queues
+cs/queue
+.operating systems
+cs/os

@@ -11,5 +11,6 @@ libraryDependencies += cache
 libraryDependencies += javaWs
 libraryDependencies += "org.postgresql" % "postgresql" % "9.4-1206-jdbc42"
 libraryDependencies +=  "org.xerial" % "sqlite-jdbc" % "3.8.0-SNAPSHOT"
+libraryDependencies +=  "org.apache.commons" % "commons-lang3" % "3.5"
 
 resolvers += "SQLite-JDBC Repository" at "https://oss.sonatype.org/content/repositories/snapshots"

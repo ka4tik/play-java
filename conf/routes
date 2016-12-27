@@ -1,9 +1,11 @@
 GET /                                 controllers.HomeController.index
+GET /t                    controllers.TrainingController.copy
+GET /trainings                    controllers.TrainingController.index
+GET /trainings/*topic                   controllers.TrainingController.displayTraining(topic: String)
+GET /q                                controllers.QuestionSetController.questionSetFlow
 GET /questionsets                    controllers.QuestionSetController.index
 GET /questionsets/:id                controllers.QuestionSetController.questionSet(id: Long)
 POST /questionsets/review/:id        controllers.QuestionSetController.questionSetReview(id: Long)
-
-GET /q                                controllers.QuestionSetController.questionSetFlow
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)

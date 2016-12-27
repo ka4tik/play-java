@@ -1,0 +1,15 @@
+@(title: String)(menu: String)(content: String)
+@main(title) {
+    <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/sidebar.css")">
+
+    <div class="container">
+        <div id="sidebar-menu" class="col-md-2 hidden-xs hidden-sm">
+            <ul class="main-menu nav nav-stacked affix">
+                @Html(menu)
+            </ul>
+        </div>
+        <div id="static-content" class="col-md-10">
+            @Html(content)
+        </div>
+    </div>
+}
