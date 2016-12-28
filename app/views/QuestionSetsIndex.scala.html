@@ -10,7 +10,7 @@
                     <ul class="list-group">
                         @for(questionSet <- questionSets) {
                             <a href="@routes.QuestionSetController.questionSet(questionSet.getId)"><li class="list-group-item">
-                                <span class="tag tag-info tag-pill float-xs-right">@questionSet.getQuestionList.size() questions</span>
+                                <span class="label label-info pull-right">@questionSet.getQuestionList.size() questions</span>
                                 @questionSet.name
                             </li></a>
                         }

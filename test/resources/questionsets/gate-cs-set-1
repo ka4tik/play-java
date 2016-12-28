@@ -39,7 +39,7 @@ A cube is built using 64 cubic blocks of side one unit. After it is built, one c
 3
 The surface area of the body will remain unchanged as when a cube is removed, it exposes three faces, which makes the number of exposed faces same as before removal.   So, surface area of the body before removal = surface area of the body after removal = 6 * side * side = 6 * 4 * 4 = 96.   Thus, D is the correct choice.
 
-A shaving set company sells 4 different types of razors, Elegance, Smooth, Soft and Executive. Elegance sells at Rs. 48, Smooth at Rs. 63, Soft at Rs. 78 and Executive at Rs. 173 per piece. The table below shows the numbers of each razor sold in each quarter of a year.</br><img class="image-fluid" src="/assets/images/questions/GATECS161.png"></br>Which product contributes the greatest fraction to the revenue of the company in that year?
+A shaving set company sells 4 different types of razors, Elegance, Smooth, Soft and Executive. Elegance sells at Rs. 48, Smooth at Rs. 63, Soft at Rs. 78 and Executive at Rs. 173 per piece. The table below shows the numbers of each razor sold in each quarter of a year.</br><img class="image-fluid img-responsive" src="/assets/images/questions/GATECS161.png"></br>Which product contributes the greatest fraction to the revenue of the company in that year?
 Elegance
 Executive
 Smooth

@@ -6,6 +6,58 @@ $(document).ready(function () {
     console.log("isReview: " + isReview);
     console.log("type isReview: " + typeof isReview);
 
+    $("#questions-div").steps({
+        headerTag: "h3",
+        bodyTag: "section",
+        transitionEffect: "slideLeft",
+        autoFocus: true,
+        enableAllSteps: true,
+        onFinished: function (event, currentIndex)
+        {
+            if(!isReview) {
+                $("body").addClass("loading");
+
+                var questions = [];
+
+                $(".question").each(function () {
+
+                    // Make an object for each question
+                    // This should have the question ID, the user Answer and the time taken.
+
+                    questionObj = {};
+
+                    var question_id = $(this).data('question-id');
+                    var user_answer = $(this).find("input:checked").val();
+
+                    if (user_answer == undefined) {
+                        var user_answer = "-1";
+                    }
+
+                    questionObj['question_id'] = question_id;
+                    questionObj['user_answer'] = user_answer;
+
+                    // Now we want to put that object within the array of questions
+
+                    questions.push(questionObj);
+
+                    console.log('Logged a question');
+
+                });
+                var question_set_id = $('.root').attr('data-question-set-id');
+                console.log("Question set id: " + question_set_id);
+                var jsonQuestions = JSON.stringify(questions);
+                console.log(jsonQuestions);
+
+                $("#json_form_data").val(jsonQuestions);
+                console.log($("#submit"));
+                $("#submit").click();
+            }
+
+        }
+
+    });
+
+
     if (isReview) {
         $(".question").each(function () {
 
@@ -38,51 +90,6 @@ $(document).ready(function () {
             $(this).addClass('selected-answer');
             $(this).addClass('bg-info text-white');
 
-
-        });
-    }
-
-
-    if (!isReview) {
-        $("form").submit(function (e) {
-
-            e.preventDefault();
-            e.stopPropagation();
-            $("body").addClass("loading");
-
-            var questions = [];
-
-            $(".question").each(function () {
-
-                // Make an object for each question
-                // This should have the question ID, the user Answer and the time taken.
-
-                questionObj = {};
-
-                var question_id = $(this).data('question-id');
-                var user_answer = $(this).find("input:checked").val();
-
-                if (user_answer == undefined) {
-                    var user_answer = "-1";
-                }
-
-                questionObj['question_id'] = question_id;
-                questionObj['user_answer'] = user_answer;
-
-                // Now we want to put that object within the array of questions
-
-                questions.push(questionObj);
-
-                console.log('Logged a question');
-
-            });
-            var question_set_id = $('.root').attr('data-question-set-id');
-            console.log("Question set id: " + question_set_id);
-            var jsonQuestions = JSON.stringify(questions);
-            console.log(jsonQuestions);
-
-            $("#json_form_data").val(jsonQuestions);
-            this.submit();
 
         });
     }

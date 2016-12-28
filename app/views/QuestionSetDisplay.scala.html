@@ -12,8 +12,13 @@
         <div class="container mt-2">
             <form id=practice_form" method="post" action="/questionsets/review/@questionSet.id">
                 <input type="hidden" name="json_form_data" id="json_form_data">
+                <div id="questions-div">
+
             @for(question <- questionSet.getQuestionList) {
                 @(index += 1)
+                <h3>@index</h3>
+                <section>
+
                 <div class="row mt-1">
                     <div class="col-md-12">
                         <div>
@@ -27,10 +32,10 @@
                     </div>
 
                     <div class="col-md-6 ">
-                        <div class="card">
+                        <div>
                         @for(option <- question.getOptions) {
                             <div data-question-id="@question.id" data-answer-value="@question.getOptions.indexOf(option)"
-                            class="question-answer card-block clickable"><span class="tag tag-default">@{
+                            class="question-answer clickable"><span>@{
                                 (question.getOptions.indexOf(option) + 'A').toChar
                             } </span> @option
                             </div>
@@ -40,11 +45,11 @@
                     </div>
 
                 </div>
+                </section>
 
-            }
-                <div class="container mt-3 mx-auto">
-                    <input class="btn-success btn-lg" type="submit" value="Submit Test">
-                </div>
+                }
+                    </div>
+                    <input id ="submit"  class="btn-success btn-lg" type="submit" value="Submit Test">
 
             </form>
         </div>
